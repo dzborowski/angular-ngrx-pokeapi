@@ -1,0 +1,12 @@
+<div *ngIf="my_poke" class="back">
+  <h3>Pokemon {{ my_poke.name | uppercase }}</h3>
+  <h5>ID: {{ my_poke.id }}</h5>
+  <h5>Experience: {{ my_poke.base_experience }}</h5>
+  <h5>Height: {{ my_poke.height }}</h5>
+  <h5>Weight: {{ my_poke.weight }}</h5>
+</div>
+
+
+<div class="back">
+  <button mat-raised-button color="primary" (click)="goBack()">Back</button>
+</div>
