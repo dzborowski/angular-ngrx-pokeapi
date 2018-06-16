@@ -38,9 +38,9 @@ export class PokemonListComponent implements OnInit {
 
       if (x.pokemons.length > 0 && this.ELEMENT_DATA.length == 0) {
 
-        x.pokemons.map(poke => {
+        this.ELEMENT_DATA = x.pokemons.map(poke => {
           let id = parseInt(poke.url.split('/')[6]);
-          this.ELEMENT_DATA.push(new PokemonObj(id, poke.name, poke.url));
+          return new PokemonObj(id, poke.name, poke.url)
         });
 
         this.dataSource = new MatTableDataSource<PokemonObj>(this.ELEMENT_DATA);
